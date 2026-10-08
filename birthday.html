@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+                   maximum-scale=1.0, user-scalable=no">
+
+    <title>For Diya 💗</title>
+
+    <link rel="stylesheet" href="final.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Floating background -->
+<div class="background-hearts">
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>✧</span>
+    <span>♡</span>
+</div>
+
+
+<!-- =====================================================
+     SCREEN 1 — INTRO
+===================================================== -->
+
+<section class="screen active" id="screen1">
+
+    <div class="top-love">A tiny surprise made with love 💗</div>
+
+    <div class="intro-cat">
+        <img
+            src="https://cataas.com/cat/cute"
+            alt="Cute cat">
+    </div>
+
+    <div class="intro-card">
+
+        <div class="mini-badge">
+            🎀 PRIVATE BIRTHDAY MISSION
+        </div>
+
+        <h1>
+            Heyyy<br>
+            <span>Diya Chhetri</span> 💕
+        </h1>
+
+        <p class="subtitle">
+            Someone has secretly prepared<br>
+            a little birthday adventure for you...
+        </p>
+
+        <div class="age">
+            <span>17</span>
+            <small>years of being cute ✨</small>
+        </div>
+
+        <button class="main-btn" onclick="startAdventure()">
+            Open my surprise 🎁
+        </button>
+
+        <p class="tiny-text">
+            warning: may contain cats, flowers & boyfriend nonsense 😭
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 2 — CAT GAME
+===================================================== -->
+
+<section class="screen" id="screen2">
+
+    <div class="screen-header">
+        <span>MISSION 01 / 05</span>
+        <span>🐾 CAT DELIVERY</span>
+    </div>
+
+    <div class="game-card">
+
+        <div class="mission-icon">🐱</div>
+
+        <h2>Catch the birthday cat!</h2>
+
+        <p>
+            The cat stole your birthday present 😭
+            <br>
+            Catch it <b>3 times</b> to continue.
+        </p>
+
+        <div class="cat-arena" id="catArena">
+
+            <button class="running-cat"
+                    id="runningCat"
+                    onclick="catchCat()">
+
+                <img
+                    src="https://cataas.com/cat/cute"
+                    alt="Funny cat">
+
+            </button>
+
+        </div>
+
+        <div class="score">
+            Cats caught:
+            <strong id="catScore">0</strong> / 3
+        </div>
+
+        <div class="cat-message" id="catMessage">
+            Catch me if you can 😼
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 3 — FLOWERS
+===================================================== -->
+
+<section class="screen" id="screen3">
+
+    <div class="screen-header">
+        <span>MISSION 02 / 05</span>
+        <span>💐 FLOWER DELIVERY</span>
+    </div>
+
+    <div class="flower-card">
+
+        <div class="flower-decor">🌷 🌹 🌷</div>
+
+        <h2>
+            These flowers are for you.
+        </h2>
+
+        <p>
+            Because one flower wasn't enough...
+            <br>
+            so your boyfriend ordered a whole garden. 😌
+        </p>
+
+        <div class="bouquet">
+
+            <div class="flower tulip">🌷</div>
+            <div class="flower rose">🌹</div>
+            <div class="flower tulip">🌷</div>
+            <div class="flower rose">🌹</div>
+            <div class="flower tulip">🌷</div>
+
+            <div class="bouquet-wrap">
+                🎀
+            </div>
+
+        </div>
+
+        <button class="main-btn" onclick="openFlowers()">
+            Open bouquet 💐
+        </button>
+
+        <div class="flower-message" id="flowerMessage">
+            Tap the bouquet first 🌷
+        </div>
+
+        <button class="small-btn hidden" id="flowerNext"
+                onclick="goTo(4)">
+            Next surprise →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 4 — CAKE
+===================================================== -->
+
+<section class="screen" id="screen4">
+
+    <div class="screen-header">
+        <span>MISSION 03 / 05</span>
+        <span>🎂 BIRTHDAY CAKE</span>
+    </div>
+
+    <div class="cake-card">
+
+        <div class="cake-title">
+            <span>FOR</span>
+            <strong>DIYA</strong>
+        </div>
+
+        <p id="cakeInstruction">
+            Make a wish and blow out the candles 🕯️
+        </p>
+
+        <div class="cake-area">
+
+            <div class="cake-candles">
+
+                <button class="candle" onclick="blowCandle(this)">
+                    <span class="flame">🔥</span>
+                </button>
+
+                <button class="candle" onclick="blowCandle(this)">
+                    <span class="flame">🔥</span>
+                </button>
+
+                <button class="candle" onclick="blowCandle(this)">
+                    <span class="flame">🔥</span>
+                </button>
+
+            </div>
+
+            <div class="cake-top">
+                <span>17</span>
+            </div>
+
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+
+            <div class="cake-plate"></div>
+
+        </div>
+
+        <div class="cake-controls">
+
+            <button class="main-btn"
+                    id="cakeButton"
+                    onclick="cutCake()">
+                🎂 Cut the cake
+            </button>
+
+        </div>
+
+        <div class="cake-message" id="cakeMessage"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 5 — VIDEO
+===================================================== -->
+
+<section class="screen" id="screen5">
+
+    <div class="screen-header">
+        <span>MISSION 04 / 05</span>
+        <span>🎬 LITTLE MEMORIES</span>
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-cat">
+            🐱
+        </div>
+
+        <h2>
+            Okay... now some memories 👀
+        </h2>
+
+        <p>
+            Replace these videos with your own cute videos of you two.
+        </p>
+
+        <div class="video-box">
+
+            <video id="memoryVideo"
+                   controls
+                   playsinline
+                   preload="metadata">
+
+                <source src="video1.mp4" type="video/mp4">
+
+                Your browser doesn't support video.
+            </video>
+
+        </div>
+
+        <div class="video-buttons">
+
+            <button onclick="changeVideo()">
+                💗 Memory 1
+            </button>
+
+        
+
+        </div>
+       <button onclick="changeVideo('C:/Users/sachh/Downloads/1005.mp4')">
+    Play Video
+</button>
+
+</button>
+
+
+
+<script>
+function changeVideo(video) {
+    const player = document.getElementById("myVideo");
+    const source = document.getElementById("videoSource");
+
+    source.src = video;
+    player.load();
+    player.play();
+}
+</script>
+
+        <button class="main-btn"
+                onclick="goTo(6)">
+            One last surprise 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SCREEN 6 — FINAL LETTER
+===================================================== -->
+
+<section class="screen" id="screen6">
+
+    <div class="final-stars">
+        ✦　♡　✧　♡　✦
+    </div>
+
+    <div class="final-card">
+
+        <div class="final-cat">
+
+            <img
+                src="https://cataas.com/cat/says/Happy%20Birthday%20Diya"
+                alt="Birthday cat">
+
+        </div>
+
+        <div class="final-badge">
+            🎀 SURPRISE COMPLETE 🎀
+        </div>
+
+        <h1>
+            Happy Birthday
+            <span>Diya 💗</span>
+        </h1>
+
+        <div class="letter">
+
+            <p>
+                Dear Diya,
+            </p>
+
+            <p>
+                Today isn't just another day.
+                It's the birthday of one of the most
+                special people in my life.
+            </p>
+
+            <p>
+                I hope your 17th year brings you
+                happiness, beautiful memories,
+                peaceful nights and everything
+                your heart wishes for.
+            </p>
+
+            <p>
+                And yes...
+                I know this website is a little crazy 😭
+                but I made it because you're worth
+                making something crazy for.
+            </p>
+
+            <p class="love-line">
+                Happy Birthday, Pookie. 🌷💗
+            </p>
+
+            <p class="signature">
+                — Your boyfriend 🫶
+            </p>
+
+        </div>
+
+        <button class="main-btn"
+                onclick="finalCelebration()">
+            Tap for the final surprise 🎉
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CELEBRATION OVERLAY
+===================================================== -->
+
+<div class="celebration" id="celebration">
+
+    <div class="celebration-content">
+
+        <div class="giant-heart">
+            💗
+        </div>
+
+        <h1>
+            HAPPY BIRTHDAY
+        </h1>
+
+        <h2>
+            DIYA CHHETRI 🎂
+        </h2>
+
+        <p>
+            17 looks REALLY good on you. 😭💗
+        </p>
+
+        <div class="celebration-cats">
+
+            <img src="https://cataas.com/cat/cute">
+            <img src="https://cataas.com/cat/cute">
+
+        </div>
+
+        <button class="main-btn"
+                onclick="closeCelebration()">
+            Replay 💕
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Confetti container -->
+<div id="confetti"></div>
+
+<script src="final.js"></script>
+
+</body>
+</html>
